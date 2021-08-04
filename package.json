@@ -1,0 +1,26 @@
+{
+  "name": "au-vignoble",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Au Vignoble",
+  "author": "Florian HOCQUARD",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.13.2",
+    "gatsby": "^3.10.2",
+    "gatsby-plugin-styled-components": "^4.10.0",
+    "gatsby-source-datocms": "^2.6.16",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.3.0"
+  }
+}

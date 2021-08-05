@@ -1,0 +1,11 @@
+.cardShop {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer {
+    display:flex;
+    justify-content: space-around;
+    font-size: 2rem;
+    margin-top: 3rem;
+}

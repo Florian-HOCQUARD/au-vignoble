@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <>
 
-      <div class='footer'>
+      <div className='footer'>
         <Link href='#'>CGV</Link>
         <Link href='#'>A propos</Link>
         <Link href='#'>Qui sommes-nous?</Link>

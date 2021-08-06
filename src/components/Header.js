@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import '../styles/style.css'
 
 const Title = styled.h1`
-    background:-webkit-linear-gradient(top, red 20%, grey 80%);
+    background:-webkit-linear-gradient(top, white 20%, grey 80%);
     background-clip:text;
     -webkit-background-clip:text;
     color:transparent;
     text-align: center;
-    font-size: 8rem;
+    font-size: 10rem;
     margin: 0;
     background-color: transparent;
     padding-top: 3rem;

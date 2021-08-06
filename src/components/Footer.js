@@ -11,11 +11,11 @@ const Footer = () => {
   return (
     <>
 
-      <div className='footer'>
+      <nav className='footer'>
         <Link href='#'>CGV</Link>
         <Link href='#'>A propos</Link>
         <Link href='#'>Qui sommes-nous?</Link>
-      </div>
+      </nav>
 
     </>
   )

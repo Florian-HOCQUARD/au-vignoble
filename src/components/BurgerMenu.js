@@ -1,19 +1,25 @@
 import React from 'react'
 import '../styles/style.css'
 import SearchIcon from '@material-ui/icons/Search'
+import MenuIcon from '@material-ui/icons/Menu'
 
 const BurgerMenu = () => {
   return (
     <>
+
       <nav className='nav'>
         <div className='searchContainer'>
           <input type='search' />
           <button type='submit'><SearchIcon /></button>
         </div>
-        <ul>
-          <li><a href='#'> S'inscrire</a></li>
-          <li><a href='#'> Se connecter</a></li>
-        </ul>
+        <label for='toggle'><MenuIcon /></label>
+        <input type='checkbox' id='toggle' />
+        <div className='close-btn'>
+          <ul>
+            <li><a href='#'> S'inscrire</a></li>
+            <li><a href='#'> Se connecter</a></li>
+          </ul>
+        </div>
       </nav>
     </>
   )

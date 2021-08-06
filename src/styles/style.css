@@ -1,20 +1,19 @@
-.cardShop {
-    display: flex;
-    justify-content: space-around;
-}
-
+/* Footer */
 .footer {
+    background-color: #8A8070;
     display:flex;
     justify-content: space-around;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-top: 10rem;
+    font-family: 'Roboto Slab';
 }
 
 
-
+/*import divers et variés*/
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
 
+/*nav d'inscription et de connexion*/
 nav{
     display: flex;
     align-items: center;
@@ -23,7 +22,8 @@ nav{
     width: 100%;
     position: sticky;
     top: 0px;
-    background-color: grey;
+    background-color: #8A8070;
+    z-index: 1;
 }
 
 nav ul{
@@ -39,6 +39,8 @@ nav li{
     padding: 0 2rem;
 }
 
+
+/* l'input de recherche */
 .searchContainer{
     display: flex;
     flex: 1;
@@ -63,9 +65,22 @@ nav a{
     color: white;
     border-bottom: 2px solid transparent;
 }
+label{
+    display: none;
+}
+label, #toggle
+{
+    display: none;
+}
+
 
 
 /*CSS Card d'accueil*/
+.cardShop {
+    display: flex;
+    justify-content: space-around;
+}
+
 .container {
     height: 100%;
     width: 100%;
@@ -122,10 +137,12 @@ nav a{
 }
 
 .category .sub-head {
-    font-size: 20px;
+    font-size: 30px;
     color: rgba(255, 255, 255, 1);
     margin-bottom: 1.5px;
     padding: 15px;
+    text-align: center;
+    font-family: 'Roboto Slab';
 }
 
 .description {
@@ -134,6 +151,8 @@ nav a{
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
     color:white;
     padding: 15px;
+    text-align: center;
+    font-family: 'Roboto Slab';
 }
 
 .card-link {
@@ -157,19 +176,9 @@ nav a{
     position: absolute;
     bottom: 0;
     width: 100%;
+    font-family: 'Roboto Slab';
 }
 
-/* .read-more {
-    text-decoration: none;
-    border: 0;
-    outline: 0;
-    padding: 16px;
-    border-radius: 1px;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
-    font-size: 16px;
-    font-weight: medium;
-    color: #6D3F2C;
-} */
 
 .read-more:hover {
     cursor: pointer;
@@ -177,4 +186,60 @@ nav a{
 
 .js-tilt-glare {
     pointer-events: none;
+}
+
+
+
+
+
+/*Media Queries */
+
+
+@media all and (max-width: 991px){
+   label 
+   {
+       width: 40px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin: 0 auto;
+       font-size:50px;
+       color: white;
+       cursor: pointer;
+   }
+   nav .close-btn{
+       display: none;
+       background: #48435C;
+       height: 60px;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    font-size: 0.3rem;
+    padding: 0 2rem;
+   }
+
+   nav .close-btn li {
+    font-size: 1.7rem;
+   }
+
+   nav
+   {
+       height: 60px;
+   }
+   #toggle:checked + .close-btn {
+       display: flex;
+   }
+
+   .searchContainer button{
+       display: none;
+   }
+
+   .cardShop{
+       display:block;
+   }
+
+
+
+
+
 }

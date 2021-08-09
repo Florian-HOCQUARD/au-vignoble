@@ -1,8 +1,9 @@
 import React from 'react'
 import '../styles/style.css'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
-const Link = styled.a`
+const Links = styled.a`
     color: white;
     text-decoration: none;
 `
@@ -12,9 +13,9 @@ const Footer = () => {
     <>
 
       <nav className='footer'>
-        <Link href='#'>CGV</Link>
-        <Link href='#'>A propos</Link>
-        <Link href='#'>Qui sommes-nous?</Link>
+        <Link to='/cgv'>CGV</Link>
+        <Link to='/about'>A propos</Link>
+        <Link to='/quisommes'>Qui sommes-nous?</Link>
       </nav>
 
     </>

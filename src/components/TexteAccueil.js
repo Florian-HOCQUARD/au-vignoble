@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/style.css'
+import { Link } from 'gatsby'
 
 const TexteAccueil = ({ img, titre, description, texteLien }) => {
   return (
@@ -15,9 +16,10 @@ const TexteAccueil = ({ img, titre, description, texteLien }) => {
           <div className='description'>
             {description}
           </div>
-          <a className='card-link' href='realisation.html'>
-            {texteLien}
-          </a>
+          {/* <a className='card-link' to='/product'> */}
+          <Link className='card-link' to='/product'>{texteLien}</Link>
+
+          {/* </a> */}
         </div>
 
       </div>

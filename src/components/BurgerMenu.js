@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/style.css'
 import SearchIcon from '@material-ui/icons/Search'
 import MenuIcon from '@material-ui/icons/Menu'
+import { Link } from 'gatsby'
 
 const BurgerMenu = () => {
   return (
@@ -16,8 +17,8 @@ const BurgerMenu = () => {
         <input type='checkbox' id='toggle' />
         <div className='close-btn'>
           <ul>
-            <li><a href='#'> S'inscrire</a></li>
-            <li><a href='#'> Se connecter</a></li>
+            <li><Link to='/inscription'> S'inscrire</Link></li>
+            <li><Link to='/login'> Se connecter</Link></li>
           </ul>
         </div>
       </nav>

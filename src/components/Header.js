@@ -14,6 +14,9 @@ const Title = styled.h1`
     padding-top: 3rem;
     padding-bottom: 3rem;
     font-family: 'Roboto Slab';
+    @media all and (max-width: 991px){
+      font-size: 8rem;
+    }
 `
 
 const Header = () => {

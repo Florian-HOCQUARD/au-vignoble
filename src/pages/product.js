@@ -27,8 +27,8 @@ const Product = ({ data }) => {
                       <div class='tab-pane active' id='pic-1'><img src={node.test.url} /></div>
                       <div class='tab-pane' id='pic-2'><img src={node.test.url} /></div>
                       <div class='tab-pane' id='pic-3'><img src={node.test.url} /></div>
-                      <div class='tab-pane' id='pic-4'><img src='http://placekitten.com/400/252' /></div>
-                      <div class='tab-pane' id='pic-5'><img src='http://placekitten.com/400/252' /></div>
+                      <div class='tab-pane' id='pic-4'><img src={node.test.url} /></div>
+                      <div class='tab-pane' id='pic-5'><img src={node.test.url} /></div>
                     </div>
                     <ul class='preview-thumbnail nav nav-tabs'>
                       <li class='active'><a data-target='#pic-1' data-toggle='tab'><img src={img} /></a></li>
@@ -40,7 +40,7 @@ const Product = ({ data }) => {
 
                   </div>
                   <div class='details col-md-6'>
-                    <Link><h3 class='product-title'><a to='/{datoCmsProduct.slug}'>{node.title}</a></h3></Link>
+                    <h3 class='product-title'><Link to={`/${node.slug}`}>{node.title}</Link></h3>
                     <div class='rating'>
                       <div class='stars'>
                         <span class='fa fa-star checked' />
@@ -78,6 +78,7 @@ export const query = graphql`
       allDatoCmsProduct {
           edges{
             node{
+              slug
               id
               title
               description

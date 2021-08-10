@@ -7,7 +7,6 @@ export default ({ data }) => {
     <div>
       <h1>coucou</h1>
       <h1>{post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.test.url }} />
       <img src={post.test.url} />
     </div>
   )

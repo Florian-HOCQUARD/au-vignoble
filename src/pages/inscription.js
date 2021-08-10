@@ -1,12 +1,14 @@
 import React from 'react'
 import BurgerMenu from '../components/BurgerMenu'
 import Footer from '../components/Footer'
+import Header from '../components/Header'
 import '../styles/style.css'
 
 const Inscription = () => {
   return (
     <>
       <BurgerMenu />
+      <Header />
       <div className='inscription'>
         <form name='mon-formulaire1' action='page-envoi.html' method='get'>
           <p>

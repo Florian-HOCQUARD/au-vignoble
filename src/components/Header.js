@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import '../styles/style.css'
+import { Link } from 'gatsby'
 
 const Title = styled.h1`
     background:-webkit-linear-gradient(top, white 20%, grey 80%);
@@ -18,10 +19,15 @@ const Title = styled.h1`
       font-size: 8rem;
     }
 `
+const StyledLink = styled(Link)`
+&:hover{
+text-decoration: none;
+}
+`
 
 const Header = () => {
   return (
-    <Title>Au Vignoble</Title>
+    <StyledLink to='/'><Title>Au Vignoble</Title></StyledLink>
   )
 }
 

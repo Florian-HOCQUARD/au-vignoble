@@ -338,7 +338,7 @@ label, #toggle
       -webkit-animation-duration: .3s;
               animation-duration: .3s; }
   
-  .card {
+  .cards {
     margin-top: 50px;
     background: #eee;
     padding: 3em;
@@ -428,6 +428,12 @@ label, #toggle
   
   .tooltip-inner {
     padding: 1.3em; }
+
+ #pic-1{
+        background-size: cover;
+        width: 50%;
+        object-fit: cover;
+    }
   
   @-webkit-keyframes opacity {
     0% {

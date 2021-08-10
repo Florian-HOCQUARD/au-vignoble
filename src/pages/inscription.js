@@ -10,12 +10,10 @@ const Inscription = () => {
       <BurgerMenu />
       <Header />
       <div className='inscription'>
-        <form name='mon-formulaire1' netlify-honeypot='bot-field' data-netlify='true' method='post'>
-          <input type='hidden' name='bot-field' />
+        <form name='mon-formulaire1' data-netlify='true' method='post'>
           <input type='hidden' name='form-name' value='contact' />
           <p>
             <input type='radio' name='civi' value='Mme' /> Madame
-            <input type='radio' name='civi' value='Mlle' /> Mademoiselle
             <input type='radio' name='civi' value='Mr' /> Monsieur
           </p>
           <p>

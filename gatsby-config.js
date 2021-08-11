@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld',
+    siteUrl: 'https://au-vignoble.netlify.app',
     title: 'Au Vignoble'
   },
   plugins: [

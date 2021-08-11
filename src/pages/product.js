@@ -17,21 +17,21 @@ const Product = ({ data }) => {
       {products.map(({ node }) => {
         return (
 
-          <div key={node.id} class='container'>
-            <div class='cards'>
-              <div class='container-fliud'>
-                <div class='wrapper row'>
-                  <div class='preview col-md-6'>
+          <div key={node.id} className='container'>
+            <div className='cards'>
+              <div className='container-fliud'>
+                <div className='wrapper row'>
+                  <div className='preview col-md-6'>
 
-                    <div class='preview-pic tab-content'>
-                      <div class='tab-pane active' id='pic-1'><img src={node.test.url} /></div>
-                      <div class='tab-pane' id='pic-2'><img src={node.test.url} /></div>
-                      <div class='tab-pane' id='pic-3'><img src={node.test.url} /></div>
-                      <div class='tab-pane' id='pic-4'><img src={node.test.url} /></div>
-                      <div class='tab-pane' id='pic-5'><img src={node.test.url} /></div>
+                    <div className='preview-pic tab-content'>
+                      <div className='tab-pane active' id='pic-1'><img src={node.test.url} /></div>
+                      <div className='tab-pane' id='pic-2'><img src={node.test.url} /></div>
+                      <div className='tab-pane' id='pic-3'><img src={node.test.url} /></div>
+                      <div className='tab-pane' id='pic-4'><img src={node.test.url} /></div>
+                      <div className='tab-pane' id='pic-5'><img src={node.test.url} /></div>
                     </div>
-                    <ul class='preview-thumbnail nav nav-tabs'>
-                      <li class='active'><a data-target='#pic-1' data-toggle='tab'><img src={img} /></a></li>
+                    <ul className='preview-thumbnail nav nav-tabs'>
+                      <li className='active'><a data-target='#pic-1' data-toggle='tab'><img src={img} /></a></li>
                       <li><a data-target='#pic-2' data-toggle='tab'><img src={node.test.url} /></a></li>
                       <li><a data-target='#pic-3' data-toggle='tab'><img src={node.test.url} /></a></li>
                       <li><a data-target='#pic-4' data-toggle='tab'><img src={node.test.url} /></a></li>
@@ -39,24 +39,33 @@ const Product = ({ data }) => {
                     </ul>
 
                   </div>
-                  <div class='details col-md-6'>
-                    <h3 class='product-title'><Link to={`/${node.slug}`}>{node.title}</Link></h3>
-                    <div class='rating'>
-                      <div class='stars'>
-                        <span class='fa fa-star checked' />
-                        <span class='fa fa-star checked' />
-                        <span class='fa fa-star checked' />
-                        <span class='fa fa-star' />
-                        <span class='fa fa-star' />
+                  <div className='details col-md-6'>
+                    <h3 className='product-title'><Link to={`/${node.slug}`}>{node.title}</Link></h3>
+                    <div className='rating'>
+                      <div className='stars'>
+                        <span className='fa fa-star checked' />
+                        <span className='fa fa-star checked' />
+                        <span className='fa fa-star checked' />
+                        <span className='fa fa-star' />
+                        <span className='fa fa-star' />
                       </div>
-                      <span class='review-no'>41 votes</span>
+                      <span className='review-no'>41 votes</span>
                     </div>
-                    <p class='product-description'>{node.description}</p>
-                    <h4 class='price'>Prix: <span>{node.price} €</span></h4>
-                    <h4 class='rest'>Il en reste: <span>{node.quantit}</span></h4>
-                    <div class='action'>
-                      <button class='add-to-cart btn btn-default' type='button'>Ajouter au panier</button>
-                      <button class='like btn btn-default' type='button'><span class='fa fa-heart' /></button>
+                    <p className='product-description'>{node.description}</p>
+                    <h4 className='price'>Prix: <span>{node.price} €</span></h4>
+                    <h4 className='rest'>Il en reste: <span>{node.quantit}</span></h4>
+                    <div className='action'>
+                      <div hidden id='snipcart' data-api-key='YzExZTg4YzItOWU0My00MTljLWI1NjctZmFiZmFlZDBkYTE3NjM3NjM3NDM0MzE0NjY5MzQ0' data-config-modal-style='side' />
+                      <button
+                        className='add-to-cart btn btn-default snipcart-add-item' data-item-id='starry-night'
+                        data-item-price={node.price}
+                        data-item-url={node.slug}
+                        data-item-description={node.description}
+                        data-item-image={node.test.url}
+                        data-item-name={node.title} type='button'
+                      >Ajouter au panier
+                      </button>
+                      <button className='like btn btn-default' type='button'><span className='fa fa-heart' /></button>
                     </div>
                   </div>
                 </div>

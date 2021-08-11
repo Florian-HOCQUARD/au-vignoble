@@ -19,6 +19,7 @@ const BurgerMenu = () => {
           <ul>
             <li><Link to='/inscription'> S'inscrire</Link></li>
             <li><Link to='/login'> Se connecter</Link></li>
+            <button class='snipcart-checkout'>Voir ton panier</button>
           </ul>
         </div>
       </nav>

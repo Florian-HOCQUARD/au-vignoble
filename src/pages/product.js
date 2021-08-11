@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import BurgerMenu from '../components/BurgerMenu'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -8,7 +8,21 @@ import { graphql, Link } from 'gatsby'
 
 const Product = ({ data }) => {
   const products = data.allDatoCmsProduct.edges
-  console.log(data.site)
+
+  useEffect(() => {
+    const callApi = async () => {
+      const products = await window.fetch('https://app.snipcart.com/api/products/AP1', {
+        headers: {
+          Accept: 'application/json',
+          Authorization: 'YzExZTg4YzItOWU0My00MTljLWI1NjctZmFiZmFlZDBkYTE3NjM3NjM3NDM0MzE0NjY5MzQ0'
+        }
+      })
+      console.log(products)
+    }
+    callApi()
+  }, []
+  )
+
   return (
     <>
       <BurgerMenu />
@@ -64,6 +78,9 @@ const Product = ({ data }) => {
                         data-item-description={node.description}
                         data-item-image={node.test.url}
                         data-item-name={node.title} type='button'
+                        data-item-quantity='1'
+                        data-item-custom1-name='Cadeau'
+                        data-item-custom1-type='checkbox'
                       >Ajouter au panier
                       </button>
                       <button className='like btn btn-default' type='button'><span className='fa fa-heart' /></button>

@@ -8,13 +8,14 @@ import { graphql, Link } from 'gatsby'
 
 const Product = ({ data }) => {
   const products = data.allDatoCmsProduct.edges
-  console.log(products)
+  console.log(data.site)
   return (
     <>
       <BurgerMenu />
       <Header />
 
       {products.map(({ node }) => {
+        console.log(`${data.site.siteMetadata.siteUrl}/${node.slug}`)
         return (
 
           <div key={node.id} className='container'>
@@ -57,9 +58,9 @@ const Product = ({ data }) => {
                     <div className='action'>
                       <div hidden id='snipcart' data-api-key='YzExZTg4YzItOWU0My00MTljLWI1NjctZmFiZmFlZDBkYTE3NjM3NjM3NDM0MzE0NjY5MzQ0' data-config-modal-style='side' />
                       <button
-                        className='add-to-cart btn btn-default snipcart-add-item' data-item-id='starry-night'
+                        className='add-to-cart btn btn-default snipcart-add-item' data-item-id={node.id}
                         data-item-price={node.price}
-                        data-item-url={node.slug}
+                        data-item-url={`${data.site.siteMetadata.siteUrl}/product`}
                         data-item-description={node.description}
                         data-item-image={node.test.url}
                         data-item-name={node.title} type='button'
@@ -84,6 +85,11 @@ export default Product
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
       allDatoCmsProduct {
           edges{
             node{

@@ -193,6 +193,8 @@ label, #toggle
     font-size: 2rem;
     font-family: 'Roboto Slab';
     margin-top: 1rem;
+    display: table;
+    vertical-align: center;
 }
 
 .inscription input{

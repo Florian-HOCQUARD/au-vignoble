@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 
-export default ({ data }) => {
+const ProductPage = ({ data }) => {
   const post = data.datoCmsProduct
   return (
     <div>
@@ -25,3 +25,5 @@ export const query = graphql`
             }
       }
   `
+
+export default ProductPage

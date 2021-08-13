@@ -3,7 +3,6 @@ import BurgerMenu from '../components/BurgerMenu'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import '../styles/style.css'
-
 import { handleLogin } from '../services/auth'
 
 const Login = (state) => {

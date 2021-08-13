@@ -3,15 +3,15 @@ import '../styles/style.css'
 import SearchIcon from '@material-ui/icons/Search'
 import MenuIcon from '@material-ui/icons/Menu'
 import { Link } from 'gatsby'
-import { getUser, isLoggedIn } from '../services/auth'
+// import { getUser, isLoggedIn } from '../services/auth'
 
 const BurgerMenu = () => {
-  let greetingMessage = ''
-  if (isLoggedIn()) {
-    greetingMessage = `Hello ${getUser().name}`
-  } else {
-    greetingMessage = 'You are not logged in'
-  }
+  // let greetingMessage = ''
+  // if (isLoggedIn()) {
+  //   greetingMessage = `Hello ${getUser().name}`
+  // } else {
+  //   greetingMessage = 'You are not logged in'
+  // }
   return (
     <>
 

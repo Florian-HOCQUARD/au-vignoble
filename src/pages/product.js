@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import BurgerMenu from '../components/BurgerMenu'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -9,30 +9,19 @@ import { graphql, Link } from 'gatsby'
 const Product = ({ data }) => {
   const products = data.allDatoCmsProduct.edges
 
-  // useEffect(() => {
-  //   const callApi = async () => {
-  //     const products = await window.fetch('https://app.snipcart.com/api/products/AP1', {
-  //       headers: {
-  //         Accept: 'application/json',
-  //         Authorization: 'YzExZTg4YzItOWU0My00MTljLWI1NjctZmFiZmFlZDBkYTE3NjM3NjM3NDM0MzE0NjY5MzQ0'
-  //       }
-  //     })
-  //     console.log(products)
-  //   }
-  //   callApi()
-  // }, []
-  // )
-
-  // useEffect(() => {
-  //   const callApi = async () => {
-  //     const url = 'https://node-crud-tuto12.herokuapp.com/'
-  //     const response = await window.fetch(url)
-  //     const product = await response.json()
-  //     console.log(product)
-  //   }
-  //   callApi()
-  // }, []
-  // )
+  useEffect(() => {
+    const callApi = async () => {
+      const products = await window.fetch('https://app.snipcart.com/api/products/AP1', {
+        headers: {
+          Accept: 'application/json',
+          Authorization: 'YzExZTg4YzItOWU0My00MTljLWI1NjctZmFiZmFlZDBkYTE3NjM3NjM3NDM0MzE0NjY5MzQ0'
+        }
+      })
+      console.log(products)
+    }
+    callApi()
+  }, []
+  )
 
   return (
     <>

@@ -11,7 +11,7 @@ const Product = ({ data }) => {
 
   useEffect(() => {
     const callApi = async () => {
-      const url = 'https://node-crud-tuto12.herokuapp.com/'
+      const url = 'http://localhost:3000/rooms'
       const response = await window.fetch(url)
       const product = await response.json()
       console.log(product)

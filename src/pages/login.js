@@ -1,4 +1,4 @@
-import React, { useState, setState } from 'react'
+import React, { useState } from 'react'
 import BurgerMenu from '../components/BurgerMenu'
 import Footer from '../components/Footer'
 import Header from '../components/Header'

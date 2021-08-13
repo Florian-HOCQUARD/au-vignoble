@@ -1,12 +1,12 @@
 import React from 'react'
 import '../styles/style.css'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-const Links = styled.a`
-    color: white;
-    text-decoration: none;
-`
+// const Links = styled.a`
+//     color: white;
+//     text-decoration: none;
+// `
 
 const Footer = () => {
   return (

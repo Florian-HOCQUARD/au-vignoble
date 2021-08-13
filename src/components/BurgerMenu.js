@@ -2,8 +2,8 @@ import React from 'react'
 import '../styles/style.css'
 import SearchIcon from '@material-ui/icons/Search'
 import MenuIcon from '@material-ui/icons/Menu'
-import { Link, navigate } from 'gatsby'
-import { getUser, isLoggedIn, logout } from '../services/auth'
+import { Link } from 'gatsby'
+import { getUser, isLoggedIn } from '../services/auth'
 
 const BurgerMenu = () => {
   let greetingMessage = ''

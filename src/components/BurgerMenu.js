@@ -9,6 +9,8 @@ const BurgerMenu = () => {
     <>
 
       <nav className='nav'>
+        <button class='snipcart-customer-signin'>My account</button>
+
         <div className='searchContainer'>
           <input type='search' />
           <button type='submit'><SearchIcon /></button>

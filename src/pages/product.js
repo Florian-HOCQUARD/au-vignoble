@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import BurgerMenu from '../components/BurgerMenu'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -8,6 +8,7 @@ import { graphql } from 'gatsby'
 
 const Product = ({ data }) => {
   const products = data.allDatoCmsProduct.edges
+  const [client, setClient] = useState('')
 
   useEffect(() => {
     const callApi = async () => {
@@ -15,12 +16,12 @@ const Product = ({ data }) => {
       const response = await window.fetch(url)
       const product = await response.json()
       console.log(product)
-      /* eslint no-undef: "off" */
-      // Snipcart.api.customer.fetchOrders()
+      const recup = JSON.parse(window.localStorage.getItem('tokenClient'))
+      setClient(recup)
+      console.log(recup)
     }
     callApi()
   }, [])
-
   return (
     <>
       <BurgerMenu />

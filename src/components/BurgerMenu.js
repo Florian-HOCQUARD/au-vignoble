@@ -9,7 +9,6 @@ const BurgerMenu = () => {
     <>
 
       <nav className='nav'>
-        <button class='snipcart-customer-signin'>My account</button>
 
         <div className='searchContainer'>
           <input type='search' />
@@ -20,7 +19,7 @@ const BurgerMenu = () => {
         <div className='close-btn'>
           <ul>
             <li><Link to='/inscription'> S'inscrire</Link></li>
-            <li><Link to='/login'> Se connecter</Link></li>
+            <button class='snipcart-customer-signin'>Mon compte</button>
             <button class='snipcart-checkout'>Voir ton panier</button>
           </ul>
         </div>

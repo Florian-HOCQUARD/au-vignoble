@@ -16,14 +16,6 @@ const ProductItem = ({ data, url }) => {
     setRate(value)
   }
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault()
-  //   const updateRates = [...star, rate]
-  //   setStar(updateRates)
-  //   window.localStorage.setItem('star', JSON.stringify(rate))
-  //   setRate('')
-  // }
-
   console.log(rate)
 
   return (

@@ -5,7 +5,6 @@ export default ({ data }) => {
   const post = data.datoCmsProduct
   return (
     <div>
-      <h1>coucou</h1>
       <h1>{post.title}</h1>
       <img src={post.test.url} />
     </div>

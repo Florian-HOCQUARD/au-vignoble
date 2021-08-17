@@ -11,8 +11,8 @@ const IndexPage = () => {
     <Layout>
       <MainContent />
       <div className='cardShop'>
-        <TexteAccueil img={wineDrink} titre='Histoire' description='' texteLien='Voir plus' lien='/histoire' />
-        <TexteAccueil img={shopCard} titre='Boutique' description='kdqfhjgidfqshb' texteLien='Aller à la boutique' lien='/product' />
+        <TexteAccueil img={wineDrink} titre='Histoire' description="Voici l'histoire du vin de sa naissance à aujourd'hui." texteLien='Voir plus' lien='/histoire' />
+        <TexteAccueil img={shopCard} titre='Boutique' description="Pour trouver votre bonheur, c'est ici !" texteLien='Aller à la boutique' lien='/product' />
       </div>
     </Layout>
 

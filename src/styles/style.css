@@ -236,6 +236,42 @@ label, #toggle
   padding-right: 0;
 }
 
+/* Page History */
+
+.divStory{
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+.titleStory{
+  text-align: center;
+  padding-top: 5rem;
+  font-family: 'Roboto Slab';
+  font-size: 7rem;
+  color: white;
+}
+
+.textStory{
+  display: flex;
+  padding-top: 5rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.divStory .imgStory{
+  display: flex;
+  padding-top: 5rem;
+  padding-left: 30rem;
+  padding-right: 20rem;
+}
+
+.textStory{
+  text-align: justify;
+  color: white;
+  font-size: 3rem;
+  font-family: 'Roboto Slab';
+}
+
 /*Media Queries */
 
 

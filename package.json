@@ -18,6 +18,7 @@
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
     "babel-plugin-styled-components": "^1.13.2",
+    "datocms-html-to-structured-text": "^1.2.0",
     "gatsby": "^3.10.2",
     "gatsby-plugin-styled-components": "^4.10.0",
     "gatsby-source-datocms": "^2.6.16",

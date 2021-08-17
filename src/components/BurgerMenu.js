@@ -2,7 +2,12 @@ import React from 'react'
 import '../styles/style.css'
 import SearchIcon from '@material-ui/icons/Search'
 import MenuIcon from '@material-ui/icons/Menu'
-import { Link } from 'gatsby'
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
+import styled from 'styled-components'
+
+const button = styled.button`
+    font-size: 10rem;;
+`
 
 const BurgerMenu = () => {
   return (
@@ -18,9 +23,8 @@ const BurgerMenu = () => {
         <input type='checkbox' id='toggle' />
         <div className='close-btn'>
           <ul>
-            <li><Link to='/inscription'> S'inscrire</Link></li>
             <button class='snipcart-customer-signin'>Mon compte</button>
-            <button class='snipcart-checkout'>Voir ton panier</button>
+            <button class='snipcart-checkout'><ShoppingCartIcon /></button>
           </ul>
         </div>
       </nav>

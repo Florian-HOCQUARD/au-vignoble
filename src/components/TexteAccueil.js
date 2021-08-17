@@ -3,6 +3,7 @@ import '../styles/style.css'
 import { Link } from 'gatsby'
 
 const TexteAccueil = ({ img, titre, description, texteLien, lien }) => {
+  console.log(lien)
   return (
     <>
       <div className='container'>
@@ -17,7 +18,7 @@ const TexteAccueil = ({ img, titre, description, texteLien, lien }) => {
             {description}
           </div>
           {/* <a className='card-link' to='/product'> */}
-          <Link className='card-link' to='/product'>{texteLien}{lien}</Link>
+          <Link className='card-link' to={lien}>{texteLien}</Link>
 
           {/* </a> */}
         </div>

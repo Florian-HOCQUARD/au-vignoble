@@ -39,6 +39,10 @@ nav li{
     padding: 0 2rem;
 }
 
+nav button{
+  width: 15rem;
+}
+
 
 /* l'input de recherche */
 .searchContainer{
@@ -213,6 +217,24 @@ label, #toggle
     font-family: 'Roboto Slab';
 }
 
+#cards1{
+  height: 400px;
+  width: 1000px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#imgCards{
+  height: 350px;
+  align-items: center;
+  width: 400px;
+}
+
+#pic-1{
+  display: flex;
+  padding-left: 3rem;
+  padding-right: 0;
+}
 
 /*Media Queries */
 

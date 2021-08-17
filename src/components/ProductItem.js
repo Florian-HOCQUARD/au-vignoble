@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import img from '../styles/img/verres.jpg'
 import { Link } from 'gatsby'
+import '../styles/style.css'
 
 const ProductItem = ({ data, url }) => {
   const [rate, setRate] = useState('')
@@ -20,25 +20,25 @@ const ProductItem = ({ data, url }) => {
 
   return (
     <div key={data.id} className='container'>
-      <div className='cards'>
+      <div className='cards' id='cards1'>
         <div className='container-fliud'>
           <div className='wrapper row'>
             <div className='preview col-md-6'>
 
               <div className='preview-pic tab-content'>
-                <div className='tab-pane active' id='pic-1'><img src={data.test.url} /></div>
-                <div className='tab-pane' id='pic-2'><img src={data.test.url} /></div>
+                <div className='tab-pane active' id='pic-1'><img id='imgCards' src={data.test.url} /></div>
+                {/* <div className='tab-pane' id='pic-2'><img src={data.test.url} /></div>
                 <div className='tab-pane' id='pic-3'><img src={data.test.url} /></div>
                 <div className='tab-pane' id='pic-4'><img src={data.test.url} /></div>
-                <div className='tab-pane' id='pic-5'><img src={data.test.url} /></div>
+                <div className='tab-pane' id='pic-5'><img src={data.test.url} /></div> */}
               </div>
-              <ul className='preview-thumbnail nav nav-tabs'>
+              {/* <ul className='preview-thumbnail nav nav-tabs'>
                 <li className='active'><a data-target='#pic-1' data-toggle='tab'><img src={img} /></a></li>
                 <li><a data-target='#pic-2' data-toggle='tab'><img src={data.test.url} /></a></li>
                 <li><a data-target='#pic-3' data-toggle='tab'><img src={data.test.url} /></a></li>
                 <li><a data-target='#pic-4' data-toggle='tab'><img src={data.test.url} /></a></li>
                 <li><a data-target='#pic-5' data-toggle='tab'><img src={data.test.url} /></a></li>
-              </ul>
+              </ul> */}
 
             </div>
             <div className='details col-md-6'>
@@ -73,7 +73,6 @@ const ProductItem = ({ data, url }) => {
                   data-item-custom1-type='checkbox'
                 >Ajouter au panier
                 </button>
-                <button className='like btn btn-default' type='button'><span className='fa fa-heart' /></button>
               </div>
             </div>
           </div>

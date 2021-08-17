@@ -14,11 +14,15 @@ const Layout = ({ children }) => {
     window.localStorage.setItem('tokenClient', JSON.stringify(customer))
     setClient(customer)
     console.log(client)
+
+    // if (!customer) {
+    //   window.localStorage.removeItem('tokenClient')
+    // }
     /* eslint no-undef: "off" */
-    Snipcart.events.on('customer.signedin', (customer) => {
-      console.log(customer)
-      console.log(`Customer ${customer.email} just signed in.`)
-    })
+    // Snipcart.events.on('customer.signedin', (customer) => {
+    //   console.log(customer)
+    //   console.log(`Customer ${customer.email} just signed in.`)
+    // })
   })
 
   return (

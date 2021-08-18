@@ -17,14 +17,14 @@ const BurgerMenu = () => {
 
         <div className='searchContainer'>
           <input type='search' />
-          <button type='submit'><SearchIcon /></button>
+          <button type='submit'><SearchIcon id='searchicon' /></button>
         </div>
-        <label for='toggle'><MenuIcon /></label>
+        <label id='menuicon' for='toggle'><MenuIcon /></label>
         <input type='checkbox' id='toggle' />
         <div className='close-btn'>
           <ul>
-            <button class='snipcart-customer-signin'>Mon compte</button>
-            <button class='snipcart-checkout'><ShoppingCartIcon /></button>
+            <button id='account' class='snipcart-customer-signin'>Mon compte</button>
+            <button id='caddie' class='snipcart-checkout'><ShoppingCartIcon /></button>
           </ul>
         </div>
       </nav>

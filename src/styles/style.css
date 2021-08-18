@@ -8,13 +8,43 @@
     font-family: 'Roboto Slab';
 }
 
+nav a{
+  text-decoration: none;
+  color: white;
+  border-bottom: 2px solid transparent;
+}
+
 
 /*import divers et variés*/
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
 
 /*nav d'inscription et de connexion*/
-nav{
+
+.nav .close-btn{
+  display: none;
+  background: #48435C;
+  height: 60px;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+  font-size: 0.3rem;
+  padding: 0 2rem;
+  max-width: 40%;
+  padding-right: 0;
+  margin-right: 0rem;
+  flex: 1;
+ }
+
+ .close-btn ul {
+   padding-left: 0;
+   max-width: 100%;
+   flex:1;
+ }
+
+
+
+.nav{
     display: flex;
     align-items: center;
     margin: 0px;
@@ -24,22 +54,19 @@ nav{
     top: 0px;
     background-color: #8A8070;
     z-index: 1;
+    border: 2px solid red;
+    height: 60px;
 }
 
-nav ul{
+.nav ul{
     list-style-type: none;
     display: flex;
     align-items: center;
     margin: 0;
 }
 
-nav li{
-    text-align: center;
-    font-size: 2rem;
-    padding: 0 2rem;
-}
 
-nav button{
+.nav button{
   width: 15rem;
 }
 
@@ -47,35 +74,47 @@ nav button{
 /* l'input de recherche */
 .searchContainer{
     display: flex;
-    flex: 1;
     padding-left: 2rem;
 }
 
 .searchContainer input{
     padding: 0.5rem;
     border-radius: 1px;
+    width: 12.5rem;
 }
 
 .searchContainer button{
+  display:flex;
     margin: 0;
     height: 3.3rem;
-    width: 2%;
-    align-items: center;
+    width: 100%;
+    align-self: center;
+}
+#searchicon{
+  align-self: center;
 }
 
 
-nav a{
-    text-decoration: none;
-    color: white;
-    border-bottom: 2px solid transparent;
+
+label{  
+      width: 80px;
+      display: flex;
+      justify-content:flex-end;
+      align-items:flex-start;
+      margin: 0 auto;
+      font-size:100px;
+      color: white;
+      cursor: pointer; 
 }
-label{
-    display: none;
+
+#toggle{
+  display: none;
 }
-label, #toggle
+
+/* label, #toggle
 {
     display: none;
-}
+} */
 
 
 
@@ -85,33 +124,26 @@ label, #toggle
     justify-content: space-around;
 }
 
-.container {
+.container1 {
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30 px;
+    padding: 30px;
     cursor: default;
-    /* background: url(bg.jpg);
-    background-size: cover;
-    background-position: center;
-    justify-content: center; */
+
 }
 
 .card {
     position: relative;
     overflow: hidden;
     width: 70%;
-    height: 480px;
+    height: 380px;
     border-radius: 2px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0, 0.5);
     transform-style: preserve-3d;
     transform: perspective(1000px);
-    /* display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-    align-items: center; */
     margin: 20px;
     background:-webkit-linear-gradient(top, #6D3F2C, #100F12);
 }
@@ -192,30 +224,8 @@ label, #toggle
     pointer-events: none;
 }
 
-.inscription{
-    text-align: center;
-    font-size: 2rem;
-    font-family: 'Roboto Slab';
-    margin-top: 1rem;
-}
 
-.inscription input{
-    margin: 1rem;
-}
 
-.login{
-    text-align: center;
-    font-size: 2rem;
-    font-family: 'Roboto Slab';
-    margin-top: 1rem;
-}
-
-.login input{
-    margin:1rem;
-}
-.login h1{
-    font-family: 'Roboto Slab';
-}
 
 #cards1{
   height: 400px;
@@ -231,10 +241,16 @@ label, #toggle
 }
 
 #pic-1{
-  display: flex;
+  height: 20px;
+  max-width: 50%;
   padding-left: 3rem;
   padding-right: 0;
+  padding-top: 3rem;
+
 }
+
+
+
 
 /* Page History */
 
@@ -251,12 +267,6 @@ label, #toggle
   color: white;
 }
 
-.textStory{
-  display: flex;
-  padding-top: 5rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
-}
 
 .divStory .imgStory{
   display: flex;
@@ -270,52 +280,76 @@ label, #toggle
   color: white;
   font-size: 3rem;
   font-family: 'Roboto Slab';
+  padding-top: 5rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
+
+
+
+/* page boutique */
+
+#container{
+  border: 2px solid red;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  height: 85rem;
+  align-content: center;
+}
+
+
+#container img{
+  display: block;
+  margin: auto;
+  padding-top: 1rem;
+  max-width: 90%;
+  /* align-content: center;
+  justify-content: center; */
+  order:1;
+}
+
+#container #shopdescription{
+  justify-content: flex-end;
+  order: 2;
+  flex-direction: row;
+  text-align: justify;
+}
+
+#shopdescription h3{
+  text-align: center;
+}
+
+#shopdescription input{
+  display: block;
+  margin: auto;
+}
+
+#shopdescription h4{
+  display: block;
+  text-align: center;
+}
+
+#shopdescription button{
+  display: block;
+  margin: auto;
+  background-color: khaki;
+  color: #6D3F2C;
+}
+
 
 /*Media Queries */
 
 
 @media all and (max-width: 991px){
-   label 
-   {
-       width: 40px;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       margin: 0 auto;
-       font-size:50px;
-       color: white;
-       cursor: pointer;
-   }
-   nav .close-btn{
-    display: none;
-    background: #48435C;
-    height: 60px;
-    align-items: center;
-    margin: 0;
-    text-align: center;
-    font-size: 0.3rem;
-    padding: 0 2rem;
-   }
-
-   nav .close-btn li {
-    font-size: 1.3rem;
-    padding: 0;
-    padding-right: 0.5rem;
-   }
-
-   nav
-   {
-       height: 60px;
-   }
+  
+   
    #toggle:checked + .close-btn {
        display: flex;
+       width: 20rem;
    }
 
-   .searchContainer button{
-       display: none;
-   }
-
+  
    .cardShop{
        display:block;
    }
@@ -329,186 +363,55 @@ label, #toggle
     font-family: 'Roboto Slab';
 }
 
-.login{
-    display: block;
-    text-align: center;
-    font-size: 2rem;
-    font-family: 'Roboto Slab';
-    margin-top: 1rem;
+/* page histoire */
+
+.divStory{
+  padding-left: 0rem;
+  padding-right: 0rem;
 }
 
-.login label{
-    display: none;
-}
-
-.login input{
-    margin: 3rem;
-}
-.login h1{
-    font-family: 'Roboto Slab';
+.titleStory{
+  text-align: center;
+  padding-top: 5rem;
+  font-family: 'Roboto Slab';
+  font-size: 7rem;
+  color: white;
 }
 
 
+.divStory .imgStory{
+  padding: 0 ;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  z-index: 1;
+
+}
+
+.textStory{
+  text-align: justify;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Roboto Slab';
+  padding: 1.5rem;
+  margin: 0;
+}
+
+/* boutton de la barre de recherche en mode responsive */
+
+#account{
+  max-width: 30%;
+  height: 2.1rem;
+}
+
+#caddie{
+  max-width: 30%;
+  font-size: 1rem;
+  margin-left: 2rem;
 }
 
 
-.preview {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    @media screen and (max-width: 996px) {
-      .preview {
-        margin-bottom: 20px; } }
-  
-  .preview-pic {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1; }
-  
-  .preview-thumbnail.nav-tabs {
-    border: none;
-    margin-top: 15px; }
-    .preview-thumbnail.nav-tabs li {
-      width: 18%;
-      margin-right: 2.5%; }
-      .preview-thumbnail.nav-tabs li img {
-        max-width: 100%;
-        display: block; }
-      .preview-thumbnail.nav-tabs li a {
-        padding: 0;
-        margin: 0; }
-      .preview-thumbnail.nav-tabs li:last-of-type {
-        margin-right: 0; }
-  
-  .tab-content {
-    overflow: hidden; }
-    .tab-content img {
-      width: 100%;
-      -webkit-animation-name: opacity;
-              animation-name: opacity;
-      -webkit-animation-duration: .3s;
-              animation-duration: .3s; }
-  
-  .cards {
-    margin-top: 50px;
-    background: #eee;
-    padding: 3em;
-    line-height: 1.5em; }
-  
-  @media screen and (min-width: 997px) {
-    .wrapper {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex; } }
-  
-  .details {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-  
-  .colors {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1; }
-  
-  .product-title, .price, .sizes, .colors {
-    text-transform: UPPERCASE;
-    font-weight: bold; }
-  
-  .checked, .price span {
-    color: #ff9f1a; }
-  
-  .product-title, .rating, .product-description, .price, .vote, .sizes {
-    margin-bottom: 15px; }
-  
-  .product-title {
-    margin-top: 0; }
-  
-  .size {
-    margin-right: 10px; }
-    .size:first-of-type {
-      margin-left: 40px; }
-  
-  .color {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
-    height: 2em;
-    width: 2em;
-    border-radius: 2px; }
-    .color:first-of-type {
-      margin-left: 20px; }
-  
-  .add-to-cart, .like {
-    background: #ff9f1a;
-    padding: 1.2em 1.5em;
-    border: none;
-    text-transform: UPPERCASE;
-    font-weight: bold;
-    color: #fff;
-    -webkit-transition: background .3s ease;
-            transition: background .3s ease; }
-    .add-to-cart:hover, .like:hover {
-      background: #b36800;
-      color: #fff; }
-  
-  .not-available {
-    text-align: center;
-    line-height: 2em; }
-    .not-available:before {
-      font-family: fontawesome;
-      content: "\f00d";
-      color: #fff; }
-  
-  .orange {
-    background: #ff9f1a; }
-  
-  .green {
-    background: #85ad00; }
-  
-  .blue {
-    background: #0076ad; }
-  
-  .tooltip-inner {
-    padding: 1.3em; }
+}
 
- #pic-1{
-        background-size: cover;
-        width: 50%;
-        object-fit: cover;
-    }
-  
-  @-webkit-keyframes opacity {
-    0% {
-      opacity: 0;
-      -webkit-transform: scale(3);
-              transform: scale(3); }
-    100% {
-      opacity: 1;
-      -webkit-transform: scale(1);
-              transform: scale(1); } }
-  
-  @keyframes opacity {
-    0% {
-      opacity: 0;
-      -webkit-transform: scale(3);
-              transform: scale(3); }
-    100% {
-      opacity: 1;
-      -webkit-transform: scale(1);
-              transform: scale(1); } }
+
+
+

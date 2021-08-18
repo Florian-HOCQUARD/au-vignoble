@@ -6,7 +6,7 @@ const TexteAccueil = ({ img, titre, description, texteLien, lien }) => {
   console.log(lien)
   return (
     <>
-      <div className='container'>
+      <div className='container1'>
         <div className='card' data-tilt data-tilt-max='30' data-tilt-glare data-tilt-glare='0.55'>
           <div className='img-container'>
             <img className='img' src={img} alt='#' />

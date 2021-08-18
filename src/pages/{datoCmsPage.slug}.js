@@ -17,9 +17,8 @@ export default ({ data }) => {
       <div className='divStory'>
         <h1 className='titleStory'>{story.title}</h1>
         <img className='imgStory' src={story.image.url} />
-        <div className='textStory'>
-          {story.texte}
-        </div>
+        <div dangerouslySetInnerHTML={{ __html: story.texte }} className='textStory' />
+
       </div>
       <Footer />
     </>

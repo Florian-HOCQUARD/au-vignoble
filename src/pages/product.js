@@ -3,6 +3,7 @@ import BurgerMenu from '../components/BurgerMenu'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import ProductItem from '../components/ProductItem'
+import MainContent from '../components/MainContent'
 import '../styles/style.css'
 import { graphql } from 'gatsby'
 
@@ -26,7 +27,7 @@ const Product = ({ data }) => {
     <>
       <BurgerMenu />
       <Header />
-
+      <MainContent />
       {products.map(({ node }) => {
         console.log(`${data.site.siteMetadata.siteUrl}/${node.slug}`)
         return (

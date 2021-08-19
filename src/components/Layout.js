@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
       <BurgerMenu />
       <Header />
 
-      {children}
+      <div className='contentContainer'>{children}</div>
       <Footer />
     </>
   )

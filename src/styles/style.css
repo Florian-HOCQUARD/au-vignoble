@@ -1,3 +1,5 @@
+
+
 .contentContainer{
   min-height: calc(100vh - 4rem - 60px - 10rem - 4rem);
 }
@@ -313,6 +315,7 @@ label{
   background-color: rgb(245, 230, 181);
   margin-left: 3rem;
   margin-right: 3rem;
+  width: auto;
 }
 
 
@@ -538,6 +541,11 @@ nav a{
 
 @media all and (min-width: 737px){
 
+  .searchContainer input{
+    width: 20rem;
+}
+
+
   .nav ul{
     margin-left: 15rem;
   }
@@ -549,15 +557,70 @@ nav a{
 }
 
 @media all and (min-width: 900px){
+  .searchContainer input{
+    width: 20rem;
+}
+
   .nav ul{
     margin-left: 25rem;
   }
 }
 
 @media all and (min-width: 1110px){
+
+  .searchContainer input{
+    width: 20rem;
+}
+
   .nav ul{
     margin-left: 45rem;
   }
+
+  #container{
+
+    margin: 0.5 0.5;
+    max-height: 850px;
+    flex-wrap: wrap;
+    width: 40vw;
+  }
+
+  .samerelapute{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+
+  }
+
+  #container img{
+    height: 50%;
+  }
+
 }
 
+@media all and (min-width: 1330px){
+  .nav ul{
+    margin-left: 65rem;
+  }
+
+  #container{
+    min-height: 20px;
+  }
+}
+
+@media all and (min-width: 1680px){
+  .nav ul{
+    margin-left: 95rem;
+  }
+
+  #container{
+  display:flex;
+  }
+
+  #shopdescription p{
+    text-align: justify;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
 

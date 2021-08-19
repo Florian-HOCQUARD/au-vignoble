@@ -28,14 +28,16 @@ const Product = ({ data }) => {
       <BurgerMenu />
       <Header />
       <MainContent />
-      {products.map(({ node }) => {
-        console.log(`${data.site.siteMetadata.siteUrl}/${node.slug}`)
-        return (
+      <div className='samerelapute'>
+        {products.map(({ node }) => {
+          console.log(`${data.site.siteMetadata.siteUrl}/${node.slug}`)
+          return (
 
-          <ProductItem key={node.id} data={node} url={`${data.site.siteMetadata.siteUrl}/product`} />
+            <ProductItem key={node.id} data={node} url={`${data.site.siteMetadata.siteUrl}/product`} />
 
-        )
-      })}
+          )
+        })}
+      </div>
       <Footer />
     </>
   )

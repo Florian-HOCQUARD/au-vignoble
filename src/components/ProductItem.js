@@ -19,6 +19,7 @@ const ProductItem = ({ data, url }) => {
   console.log(rate)
 
   return (
+
     <div key={data.id} id='container'>
 
       <img src={data.test.url} />

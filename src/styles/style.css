@@ -10,14 +10,16 @@
     background-color: #8A8070;
     display:flex;
     justify-content: space-around;
-    font-size: 2rem;
+    font-size: 2.5rem;
     /* margin-top: 10rem; */
     font-family: 'Roboto Slab';
     height: 4rem;
+    align-content: center;
 }
 
 .footer a{
-  font-size: 1.5rem;;
+  font-size: 1.5rem;
+  justify-content: center;
 }
 
 nav a{
@@ -36,24 +38,26 @@ nav a{
 .nav .close-btn{
   display: none;
   /* background: #48435C; */
-  height: 5rem;
+  height: 5rem; 
   align-items: center;
   margin: 0;
   text-align: center;
-  font-size: 0.3rem;
+  font-size: 0.5rem;
   padding: 0 2rem;
   max-width: 50%;
-  padding-right: 0;
   margin-right: 0rem;
   flex: 1;
   padding-right: 1rem;
+  padding-left: 0.5rem;
  }
 
  .close-btn ul {
    padding-left: 0;
-   max-width: 100%;
+   max-width: 80%;
    flex:1;
+   justify-content: space-between;
  }
+
 
 
 
@@ -76,13 +80,16 @@ nav a{
     display: flex;
     align-items: center;
     margin: 0;
-    height: 10rem;
+    max-height: 15rem;
+    height: 2rem;
+    /* width: 50%; */
 }
 
 
 .nav button{
   width: 15rem;
-  height: 10rem;
+  height: 8rem;
+  justify-content: space-between;
 }
 
 
@@ -108,6 +115,24 @@ nav a{
 #searchicon{
   align-self: center;
 }
+
+#account{
+  font-size: 0.1rem;
+  height: 3rem;
+}
+
+#home{
+  display:flex;
+  width: 100%;
+  height: 2.8rem;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background: #EFEFEF; 
+}
+
+
 
 
 
@@ -270,8 +295,8 @@ label{
 /* Page History */
 
 .divStory{
-  padding-left: 20rem;
-  padding-right: 20rem;
+  padding-left: 30rem;
+  padding-right: 30rem;
 }
 
 .titleStory{
@@ -296,8 +321,8 @@ label{
   font-size: 3rem;
   font-family: 'Roboto Slab';
   padding-top: 5rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding-left: 25rem;
+  padding-right: 25rem;
 }
 
 
@@ -316,6 +341,7 @@ label{
   margin-left: 3rem;
   margin-right: 3rem;
   width: auto;
+  margin-bottom: 2rem;
 }
 
 
@@ -347,6 +373,8 @@ label{
 #shopdescription p{
   text-align: justify;
   padding: 1rem 0.7rem 1rem;
+  padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 #shopdescription h4{
@@ -415,8 +443,14 @@ label{
   color: white;
   font-size: 2rem;
   font-family: 'Roboto Slab';
-  padding: 1.5rem;
+  padding: 3rem;
   margin: 0;
+}
+
+.textStory h3{
+  font-size: 4rem;
+  padding-bottom: 1rem;
+  padding-top: 1.5rem;
 }
 
 /* boutton de la barre de recherche en mode responsive */
@@ -430,9 +464,10 @@ label{
 #caddie{
   max-width: 50%;
   font-size: 1rem;
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
   height: 3.1rem;
 }
+
 
 
 }
@@ -445,6 +480,7 @@ label{
 
 @media all and (min-width: 501px){
 
+
   #account{
     max-width: 50%;
     height: 3.1rem;
@@ -454,9 +490,14 @@ label{
   #caddie{
     max-width: 50%;
     font-size: 1rem;
-    margin-left: 2rem;
+    margin-left: 0rem;
     height: 3.1rem;
   }
+
+  #home{
+    max-width: 25%;
+  }
+
   label{  
     display: none; 
 }
@@ -467,12 +508,14 @@ label{
   align-items: center;
   margin: 0;
   margin-left: 7rem;
+  width: 100%;
 }
 
 
 
   .nav .close-btn{
     display: flex;
+    max-width: 100;
    }
 
   .footer {
@@ -538,6 +581,12 @@ nav a{
 }
 }
 
+@media all and (min-width: 501px){
+  .nav ul{
+    margin-left: 20rem;
+  }
+}
+
 
 @media all and (min-width: 737px){
 
@@ -547,8 +596,10 @@ nav a{
 
 
   .nav ul{
-    margin-left: 15rem;
+    margin-left: 25rem;
   }
+
+
 
   .card {
     height: 45rem; 
@@ -577,11 +628,11 @@ nav a{
   }
 
   #container{
-
+    display: block;
     margin: 0.5 0.5;
     max-height: 850px;
     flex-wrap: wrap;
-    width: 40vw;
+    width: 27vw;
   }
 
   .samerelapute{
@@ -594,6 +645,7 @@ nav a{
 
   #container img{
     height: 50%;
+    margin: auto;
   }
 
 }
@@ -614,13 +666,18 @@ nav a{
   }
 
   #container{
-  display:flex;
+  display:block;
   }
 
   #shopdescription p{
     text-align: justify;
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+
+  #container img{
+    align-content: center;
+    margin: auto;
   }
 }
 

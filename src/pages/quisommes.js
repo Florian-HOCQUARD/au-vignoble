@@ -9,7 +9,7 @@ const Ours = () => {
     <>
       <BurgerMenu />
       <Header />
-      <h1>Product</h1>
+      <a href='../styles/img/Florian hocquard (2).pdf' />
       <Footer />
     </>
   )

@@ -3,16 +3,30 @@ import BurgerMenu from '../components/BurgerMenu'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import '../styles/style.css'
+import { graphql } from 'gatsby'
 
-const Ours = () => {
+export default ({ data }) => {
+  const cv = data.datoCmsQsn
   return (
     <>
       <BurgerMenu />
       <Header />
-      <a href='../styles/img/Florian hocquard (2).pdf' />
+      <div>
+        <img id='cv' src={cv.cv.url} />
+      </div>
       <Footer />
     </>
   )
 }
 
-export default Ours
+export const query = graphql`
+query {
+  datoCmsQsn {
+    id
+    cv {
+      url
+    }
+  }
+}
+
+    `

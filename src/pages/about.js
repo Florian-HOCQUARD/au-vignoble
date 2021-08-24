@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <BurgerMenu />
-      <h1>Product</h1>
+      <h1>L'abus d'alcool est dangereux pour la santé, à consommer avec modération !</h1>
       <Footer />
     </>
   )

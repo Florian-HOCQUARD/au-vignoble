@@ -1,6 +1,8 @@
+import { navigate } from 'gatsby'
 import React, { useState } from 'react'
 import BurgerMenu from '../components/BurgerMenu'
 import Footer from '../components/Footer'
+import MainContent from '../components/MainContent'
 import '../styles/style.css'
 
 const Contact = () => {
@@ -32,9 +34,14 @@ const Contact = () => {
     setMessage('')
   }
 
+  const returnHome = () => {
+    navigate('/')
+  }
+
   return (
     <>
       <BurgerMenu />
+      <MainContent />
       <h1 className='contactTitle'>Contactez nous !</h1>
       <div className='formContact'>
         <form onSubmit={handleSubmit} className='contactForm' action='' method='post'>
@@ -43,7 +50,7 @@ const Contact = () => {
             <input onChange={handleChange} value={message.user_name} type='text' id='name' name='user_name' />
           </div>
           <div>
-            <label className='contactEmail' for='mail'>e-mail :</label>
+            <label className='contactEmail' for='mail'>e-mail:</label>
             <input onChange={handleChange} value={message.user_mail} type='email' id='mail' name='user_mail' />
           </div>
           <div>
@@ -51,10 +58,13 @@ const Contact = () => {
             <textarea onChange={handleChange} value={message.user_message} id='msg' name='user_message' />
           </div>
           <div className='contactButton'>
-            <button type='submit' id='buttonContact'>Envoyer le message</button>
+            <button type='submit' id='buttonContact' onClick={returnHome}>Envoyer le message</button>
           </div>
         </form>
       </div>
+      <br />
+      <br />
+      <br />
       <Footer />
     </>
   )

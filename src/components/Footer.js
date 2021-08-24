@@ -14,6 +14,7 @@ const Footer = () => {
 
       <nav className='footer'>
         <Link to='/cgv'>CGV</Link>
+        <Link to='/contact'>Contact</Link>
         <Link to='/about'>A propos</Link>
         <Link to='/quisommes'>Qui sommes-nous?</Link>
       </nav>

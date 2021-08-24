@@ -18,11 +18,15 @@ const BurgerMenu = () => {
 
       <nav className='nav'>
 
-        <div className='searchContainer'>
-          <input type='search' />
+        <form
+          className='searchContainer' action='/'
+          method='get'
+          autoComplete='off'
+        >
+          <input type='text' />
           <button type='submit'><SearchIcon id='searchicon' /></button>
-        </div>
-        <label id='menuicon' for='toggle'><MenuIcon /></label>
+        </form>
+        <label className='labelMenu' id='menuicon' for='toggle'><MenuIcon /></label>
         <input type='checkbox' id='toggle' />
         <div className='close-btn'>
           <ul>

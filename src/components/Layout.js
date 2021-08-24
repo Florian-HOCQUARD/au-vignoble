@@ -4,6 +4,7 @@ import BurgerMenu from './BurgerMenu'
 import '../styles/style.css'
 import 'sanitize.css'
 import Footer from './Footer'
+import { graphql, StaticQuery } from 'gatsby'
 
 const Layout = ({ children }) => {
   const [client, setClient] = useState('')
@@ -27,7 +28,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
+
       <BurgerMenu />
+
       <Header />
 
       <div className='contentContainer'>{children}</div>

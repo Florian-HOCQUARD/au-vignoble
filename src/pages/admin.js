@@ -1,5 +1,7 @@
 import useFirebase from '../firebase'
 import React, { useEffect, useState } from 'react'
+import AdminTable from '../components/AdminTable'
+import '../styles/style.css'
 
 const Admin = () => {
   const firebase = useFirebase()
@@ -19,14 +21,18 @@ const Admin = () => {
   if (!firebase) return <p>chargement</p>
 
   if (!user) return <p>Il faut être connecté<button onClick={() => firebase.login()}>login</button></p>
-
-  return (
-    <>
-      <h1>Bonjour {user && <h1>{user.displayName}</h1>}</h1>
-      <button onClick={() => firebase.login()}>login</button>
-      <button onClick={() => firebase.logout()}>logout</button>
-    </>
-  )
+  if (user) {
+    return (
+      <>
+        <button onClick={() => firebase.login()}>login</button>
+        <button onClick={() => firebase.logout()}>logout</button>
+        <div className='divAdmin'>
+          <h1 className='adminTitle'>Bonjour {user && <h2>{user.displayName}</h2>}</h1>
+        </div>
+        <AdminTable />
+      </>
+    )
+  }
 }
 
 export default Admin

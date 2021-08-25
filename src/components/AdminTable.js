@@ -15,6 +15,17 @@ const AdminTable = () => {
     callApi()
   }, [])
 
+  const handleChange = (event, id) => {
+    const value = event.target.checked
+    console.log(value, id)
+    const options = {
+      method: 'PATCH',
+      body: JSON.stringify(value),
+      headers: { 'Content-Type': 'application/json' }
+    }
+    console.log(options)
+  }
+
   return (
     <>
       <h1 className='titleTable'>Messages reçus</h1>
@@ -34,7 +45,10 @@ const AdminTable = () => {
               <tr key={msg}>
                 <td>{msg.user_name}</td>
                 <td>{msg.user_mail}</td>
-                <td>{msg.user_message}</td>
+                <td>{msg.user_message}</td><input
+                  type='checkbox' id='vuMessage' name='vu' onChange={(event) => handleChange(event, msg._id)}
+                                           />
+                <label for='scales'>Vu</label>
               </tr>
             )
           })}

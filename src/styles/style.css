@@ -4,6 +4,45 @@
   min-height: calc(100vh - 4rem - 60px - 10rem - 4rem);
 }
 
+.titleTable{
+  text-align: center;
+}
+
+caption{
+  text-align: center;
+  font-size: 3rem;
+}
+
+table
+{
+    border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+tr{
+  height: 5rem;
+}
+
+td, th
+{
+  border: 1px solid black;
+  text-align: center;
+}
+
+td{
+  font-size: 1.5rem;
+}
+
+th{
+  font-size: 2rem;
+}
+
+.mailTable{
+  width: 25%;
+}
+
 /* Formulaire de contact */
 
 .formContact{

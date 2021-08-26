@@ -16,33 +16,6 @@ const AdminTable = () => {
     callApi()
   }, [])
 
-  const handleChange = async (event, id) => {
-    const value = event.target.checked
-    console.log(value, id)
-    const options = {
-      method: 'PATCH',
-      body: JSON.stringify({ isChecked: value }),
-      headers: { 'Content-Type': 'application/json' }
-    }
-    const response = await window.fetch(`${process.env.GATSBY_URLAPI}/message/${id}`, options)
-    const message = await response.json()
-    const updateMessage = messages.filter((msg) => msg._id !== id)
-    updateMessage.push(message)
-    const timestamp = Date.now()
-
-    setMessages(updateMessage)
-    console.log('jhyghgvf', messages)
-
-    // const index = messages.findIndex(message => message._id === id)
-    // console.log(index)
-    // const updateMessages = messages
-    // updateMessages[index].isChecked = value
-    // console.log(updateMessages)
-    // setMessages(updateMessages)
-
-    console.log(response)
-  }
-
   const handleDelete = async (event, id) => {
     const value = event.target.delete
     console.log(value, id)
@@ -81,12 +54,7 @@ const AdminTable = () => {
                 <td>{msg.user_mail}</td>
                 <td>{msg.user_message}</td>
                 <td>
-                  <input
-                    type='checkbox' id='vuMessage' name='vu' onChange={(event) => handleChange(event, msg._id)}
-                    checked={msg.isChecked}
-                  />
-                  <label htmlFor='check'>Vu</label>
-                  <br />
+
                   <button className='deleteButton' onClick={(event) => handleDelete(event, msg._id)} name='delete' type='checkbox' id='deleteMessage'>❌</button>
                 </td>
               </tr>

@@ -4,8 +4,8 @@ import BurgerMenu from '../components/BurgerMenu'
 import Footer from '../components/Footer'
 import MainContent from '../components/MainContent'
 import '../styles/style.css'
-
 const Contact = () => {
+  console.log(process.env.GATSBY_URLAPI)
   const [message, setMessage] = useState({
     user_name: '',
     user_mail: '',
@@ -21,6 +21,7 @@ const Contact = () => {
     })
   }
 
+  /* Ici je fetch l'API pour lui renvoyer une méthode POST qui permet d'envoyer des messages */
   const handleSubmit = async (event) => {
     event.preventDefault()
     const options = {
@@ -28,7 +29,8 @@ const Contact = () => {
       body: JSON.stringify(message),
       headers: { 'Content-Type': 'application/json' }
     }
-    const response = await window.fetch('http://localhost:3000/sendMessage', options)
+    const response = await window.fetch(`${process.env.GATSBY_URLAPI}/sendMessage`, options)
+
     const data = await response.json()
     console.log(data)
     setMessage('')
@@ -46,15 +48,15 @@ const Contact = () => {
       <div className='formContact'>
         <form onSubmit={handleSubmit} className='contactForm' action='' method='post'>
           <div>
-            <label className='contactName' for='name'>Nom :</label>
+            <label className='contactName' htmlFor='name'>Nom :</label>
             <input onChange={handleChange} value={message.user_name} type='text' id='name' name='user_name' />
           </div>
           <div>
-            <label className='contactEmail' for='mail'>e-mail:</label>
+            <label className='contactEmail' htmlFor='mail'>e-mail:</label>
             <input onChange={handleChange} value={message.user_mail} type='email' id='mail' name='user_mail' />
           </div>
           <div>
-            <label className='contactText' for='msg'>Message :</label>
+            <label className='contactText' htmlFor='msg'>Message :</label>
             <textarea onChange={handleChange} value={message.user_message} id='msg' name='user_message' />
           </div>
           <div className='contactButton'>

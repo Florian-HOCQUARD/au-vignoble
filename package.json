@@ -20,6 +20,7 @@
     "@material-ui/icons": "^4.11.2",
     "babel-plugin-styled-components": "^1.13.2",
     "datocms-html-to-structured-text": "^1.2.0",
+    "dotenv": "^8.6.0",
     "firebase": "^8.10.0",
     "gatsby": "^3.10.2",
     "gatsby-plugin-styled-components": "^4.10.0",

@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import AdminTable from '../components/AdminTable'
 import '../styles/style.css'
 
+/* Je demande l'authentification pour ma page admin. Si je ne suis pas connecté je n'y est pas accès, sinon oui */
+
 const Admin = () => {
   const firebase = useFirebase()
   const [user, setUser] = useState(null)

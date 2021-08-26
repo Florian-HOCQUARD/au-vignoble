@@ -1,23 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import '../styles/style.css'
 
 const ProductItem = ({ data, url }) => {
-  const [rate, setRate] = useState('')
-
-  useEffect(() => {
-    const remember = JSON.parse(window.localStorage.getItem('star'))
-    setRate(remember)
-  }, [])
-
-  const handleChange = (event) => {
-    const value = event.target.value
-    window.localStorage.setItem('star', JSON.stringify(value))
-    setRate(value)
-  }
-
-  console.log(rate)
-
   return (
 
     <div key={data.id} id='container'>
@@ -27,7 +12,6 @@ const ProductItem = ({ data, url }) => {
       <div id='shopdescription'>
         <h3><Link to={`/${data.slug}`}>{data.title}</Link></h3>
 
-        <input type='number' value={rate} onChange={handleChange} />
         <p>{data.description}</p>
         <h4>Prix: <span>{data.price} €</span></h4>
         <h4>Il en reste: <span>{data.quantit}</span></h4>

@@ -8,6 +8,7 @@ import Footer from './Footer'
 const Layout = ({ children }) => {
   const [client, setClient] = useState('')
 
+  /* ici je viens récupérer le token du client pour le mettre dans le localStorage */
   useEffect(() => {
     /* eslint no-undef: "off" */
     const customer = Snipcart.store.getState().customer
@@ -15,15 +16,6 @@ const Layout = ({ children }) => {
     window.localStorage.setItem('tokenClient', JSON.stringify(customer))
     setClient(customer)
     console.log(client)
-
-    // if (!customer) {
-    //   window.localStorage.removeItem('tokenClient')
-    // }
-    /* eslint no-undef: "off" */
-    // Snipcart.events.on('customer.signedin', (customer) => {
-    //   console.log(customer)
-    //   console.log(`Customer ${customer.email} just signed in.`)
-    // })
   })
 
   return (

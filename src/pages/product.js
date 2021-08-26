@@ -28,7 +28,7 @@ const Product = ({ data }) => {
       <BurgerMenu />
       <Header />
       <MainContent />
-      <div className='samerelapute'>
+      <div className='productContent'>
         {products.map(({ node }) => {
           console.log(`${data.site.siteMetadata.siteUrl}/${node.slug}`)
           return (

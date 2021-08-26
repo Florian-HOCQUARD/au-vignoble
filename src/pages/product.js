@@ -13,7 +13,7 @@ const Product = ({ data }) => {
 
   useEffect(() => {
     const callApi = async () => {
-      const url = 'http://localhost:3000/'
+      const url = `${process.env.GATSBY_URLAPI}`
       const response = await window.fetch(url)
       const product = await response.json()
       console.log(product)

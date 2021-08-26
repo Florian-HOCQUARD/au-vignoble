@@ -7,7 +7,7 @@ const AdminTable = () => {
   /* Ici je récupère dans ma page les messages envoyer depuis la page contact */
   useEffect(() => {
     const callApi = async () => {
-      const url = 'http://localhost:3000/messages'
+      const url = `${process.env.GATSBY_URLAPI}/messages`
       const response = await window.fetch(url)
       const messages = await response.json()
       console.log(messages)
@@ -24,7 +24,7 @@ const AdminTable = () => {
       body: JSON.stringify({ isChecked: value }),
       headers: { 'Content-Type': 'application/json' }
     }
-    const response = await window.fetch(`http://localhost:3000/message/${id}`, options)
+    const response = await window.fetch(`${process.env.GATSBY_URLAPI}/message/${id}`, options)
     const message = await response.json()
     const updateMessage = messages.filter((msg) => msg._id !== id)
     updateMessage.push(message)
@@ -51,7 +51,7 @@ const AdminTable = () => {
       body: JSON.stringify(),
       headers: { 'Content-Type': 'application/json' }
     }
-    const response = await window.fetch(`http://localhost:3000/message/${id}`, options)
+    const response = await window.fetch(`${process.env.GATSBY_URLAPI}/message/${id}`, options)
     console.log(response)
     const deleteMessage = messages.filter((msg) => msg._id !== id)
     setMessages(deleteMessage)

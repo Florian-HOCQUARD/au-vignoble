@@ -31,7 +31,7 @@ const Admin = () => {
         <div className='divAdmin'>
           <h1 className='adminTitle'>Bonjour {user && <h2>{user.displayName}</h2>}</h1>
         </div>
-        <AdminTable />
+        <AdminTable user={user} />
       </>
     )
   }

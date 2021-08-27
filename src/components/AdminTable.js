@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/style.css'
 
-const AdminTable = () => {
+const AdminTable = ({ user }) => {
   const [messages, setMessages] = useState([])
 
   /* Ici je récupère dans ma page les messages envoyer depuis la page contact */
   useEffect(() => {
     const callApi = async () => {
+      const token = user && (await user.getIdToken())
       const url = `${process.env.GATSBY_URLAPI}/messages`
-      const response = await window.fetch(url)
+      const response = await window.fetch(url, {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`
+        }
+      })
       const messages = await response.json()
       console.log(messages)
       setMessages(messages)

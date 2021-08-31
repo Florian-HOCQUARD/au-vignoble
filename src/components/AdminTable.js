@@ -22,13 +22,18 @@ const AdminTable = ({ user }) => {
     callApi()
   }, [])
 
-  const handleDelete = async (event, id) => {
-    const value = event.target.delete
-    console.log(value, id)
+  const handleDelete = async (id) => {
+    // const value = event.target.delete
+    // console.log(value, id)
+    const token = user && (await user.getIdToken())
     const options = {
       method: 'DELETE',
-      body: JSON.stringify(),
-      headers: { 'Content-Type': 'application/json' }
+      // body: JSON.stringify(),
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
+      }
+
     }
     const response = await window.fetch(`${process.env.GATSBY_URLAPI}/message/${id}`, options)
     console.log(response)
@@ -61,7 +66,7 @@ const AdminTable = ({ user }) => {
                 <td>{msg.user_message}</td>
                 <td>
 
-                  <button className='deleteButton' onClick={(event) => handleDelete(event, msg._id)} name='delete' type='checkbox' id='deleteMessage'>❌</button>
+                  <button className='deleteButton' onClick={() => handleDelete(msg._id)} name='delete' type='checkbox' id='deleteMessage'>❌</button>
                 </td>
               </tr>
             )

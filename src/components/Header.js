@@ -25,7 +25,10 @@ text-decoration: none;
 
 const Header = () => {
   return (
-    <StyledLink to='/'><Title>Au Vignoble</Title></StyledLink>
+    <>
+      <StyledLink to='/'><Title>Au Vignoble</Title></StyledLink>
+      <h2>Site en construction</h2>
+    </>
   )
 }
 

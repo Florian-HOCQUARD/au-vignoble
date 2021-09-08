@@ -11,6 +11,7 @@ const Product = ({ data }) => {
   const products = data.allDatoCmsProduct.edges
   const [client, setClient] = useState('')
 
+  /* Fonction en process pour intégrer un système de notation des produits */
   useEffect(() => {
     const callApi = async () => {
       const url = `${process.env.GATSBY_URLAPI}`
